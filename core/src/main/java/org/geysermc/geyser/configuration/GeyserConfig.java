@@ -176,7 +176,7 @@ public interface GeyserConfig {
                 Addresses players can reach NetherNet on, e.g. 198.51.100.1 or [2001:db8::1]:19133. Without a port, the NetherNet UDP port is used.
                 An address this machine does not hold is announced as the public side of a NAT forwarding that port here. Port forwarding is not set up for you.
                 Leave empty to announce the bound address, or every local address when bound to 0.0.0.0.""")
-            @AsteriskSerializer.Secret
+            @AsteriskSerializer.Asterisk
             default List<String> advertiseAddresses() {
                 return List.of();
             }
