@@ -209,6 +209,7 @@ public interface GeyserConfig {
         @ConfigSerializable
         interface NxsConfig {
             @Comment("Additional public UDP endpoints players can reach this server on, e.g. 198.51.100.1:19133 or [2001:db8::1]:19133. Port forwarding is not set up for you.")
+            @AsteriskSerializer.Asterisk
             default List<String> advertiseAddresses() {
                 return List.of();
             }
